@@ -41,6 +41,8 @@ On this topic, I will explain what CSS Grid is and how it will improve website d
 
 This is a new technology that will be the new standard for web design. 
 
+Sources: 
+
 - [css-grid-next-evolution-web-layout](https://www.linkedin.com/pulse/css-grid-next-evolution-web-layout-morten-rand-hendriksen?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_shares%3BVcMxADMXTa2w84JBTA7QyQ%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base_recent_activity_details_shares-original_share_object)
 - [mor10.com](https://mor10.com/wceu2017/)
 - [smashingmagazine.com](https://www.smashingmagazine.com/2017/06/building-production-ready-css-grid-layout/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_shares%3BVcMxADMXTa2w84JBTA7QyQ%3D%3D)
@@ -49,6 +51,8 @@ This is a new technology that will be the new standard for web design.
 ### 3. Google Cloud Platform
 
 This topic will give an overview of the Google Cloud Platform. I explain the various solutions available at the Google Cloud Platform and also compare to other solutions. I will highlight some features and advantages offered by google.
+
+Sources: 
 
 - [Google Cloud Solutions](https://cloud.google.com/solutions/)
 - [Introducing Google Cloud mobility solutions](https://www.youtube.com/watch?v=ZTdszYVvCek&list=PLIivdWyY5sqLMy5ufxSwF7ro9L-6eMYbO)
