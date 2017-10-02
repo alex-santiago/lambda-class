@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile on Lambda-class</title>
+    <link>http://lambda-class.com/tags/mobile/</link>
+    <description>Recent content in Mobile on Lambda-class</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 27 Sep 2017 15:01:44 -0700</lastBuildDate>
+    
+	<atom:link href="http://lambda-class.com/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Xamarin Project</title>
+      <link>http://lambda-class.com/post/xamarin-project/</link>
+      <pubDate>Wed, 27 Sep 2017 15:01:44 -0700</pubDate>
+      
+      <guid>http://lambda-class.com/post/xamarin-project/</guid>
+      <description>Using Xamarin Forms as an App Development Platform A brief description of the platform and the project I am working with some of the pros and cons I faced when starting to develop using Xamarin. What is Xamarin and How it works Xamarin is a development platform to build native apps for multiple platforms on a shared C# codebase. It uses the same IDE, language, and APIs to code apps for Android, IOS and Windows Phone.</description>
+    </item>
+    
+  </channel>
+</rss>

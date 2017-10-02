@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700|Zilla+Slab:400,600');
+
+/* =============================== */
+/* MY STYLES */
+/* =============================== */
+
+html {
+  font-family: "Zilla Slab", Georgia, "times new roman", serif;
+}
+
+h1, h2, h3, title {
+  font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  color: #42020E;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #616770;
+}
+
+.content h2 span {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #616770;
+  line-height: 1.25;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: block;
+}
+
+.content h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #616770;
+}
+
+.content, article {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000;
+}
+
+img.img-logo {
+  max-width: 300px;
+  height: auto;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content h2 span {
+    font-size: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .content h3 {
+    font-size: 1.5rem;
+  }
+
+  .content, article {
+    font-size: 1rem;
+  }
+
+}

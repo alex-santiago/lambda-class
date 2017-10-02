@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lambda-class</title>
+    <link>http://lambda-class.com/</link>
+    <description>Recent content on Lambda-class</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 27 Sep 2017 15:01:44 -0700</lastBuildDate>
+    
+	<atom:link href="http://lambda-class.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Xamarin Project</title>
+      <link>http://lambda-class.com/post/xamarin-project/</link>
+      <pubDate>Wed, 27 Sep 2017 15:01:44 -0700</pubDate>
+      
+      <guid>http://lambda-class.com/post/xamarin-project/</guid>
+      <description>Using Xamarin Forms as an App Development Platform A brief description of the platform and the project I am working with some of the pros and cons I faced when starting to develop using Xamarin. What is Xamarin and How it works Xamarin is a development platform to build native apps for multiple platforms on a shared C# codebase. It uses the same IDE, language, and APIs to code apps for Android, IOS and Windows Phone.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://lambda-class.com/contact/</link>
+      <pubDate>Thu, 07 Sep 2017 20:28:39 -0700</pubDate>
+      
+      <guid>http://lambda-class.com/contact/</guid>
+      <description>Alexandre Santigo da Silva E-mail: alex.santiago.mail@gmail.com</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://lambda-class.com/about/</link>
+      <pubDate>Thu, 07 Sep 2017 20:28:18 -0700</pubDate>
+      
+      <guid>http://lambda-class.com/about/</guid>
+      <description>My name is Alexandre, and I am from Brazil. I arrived in Canada in 2016 to study in the Web and Mobile Development and Design Program at Langara College.
+I have over 12 years of experience in research and product development for the Health and Financial industries. Experienced in Java, c#, JavaScript, HTML and CSS, databases like MS SQL Server, MySQL and Oracle.
+I also have experience in project management using PMI Organization standards.</description>
+    </item>
+    
+  </channel>
+</rss>

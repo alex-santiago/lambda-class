@@ -1,30 +1,31 @@
-baseURL = "http://example.org/"
+baseURL = "http://lambda-class.com/"
 languageCode = "en-us"
 title = "Lambda-class"
 theme = "blackburn"
 
-#baseurl = "https://www.example.com/" # Make sure to end baseurl with a '/'
+#baseurl = "http://www.lambda-class.com/" # Make sure to end baseurl with a '/'
 #title = "Your site title"
 author = "Your name"
 # Shown in the side menu
 copyright = "&copy; 2016. All rights reserved."
 canonifyurls = true
-paginate = 10
+paginate = 5
 
 [indexes]
   tag = "tags"
   topic = "topics"
+  categorie = "categories"
 
 [params]
   # Shown in the home page
-  subtitle = "A Hugo Theme"
-  brand = "Blackburn"
+  subtitle = "Information Bus"
+  brand = "Lambda-Class"
   googleAnalytics = "Your Google Analytics tracking ID"
   disqus = "Your Disqus shortname"
   # CSS name for highlight.js
   highlightjs = "androidstudio"
   highlightjs_extra_languages = ["yaml"]
-  dateFormat = "02 Jan 2006, 15:04"
+  dateFormat = "Jan 02 2006"
   # Include any custom CSS and/or JS files
   # (relative to /static folder)
   custom_css = ["css/my.css"]
@@ -51,9 +52,15 @@ paginate = 10
     identifier = "about"
     url = "/about/"
   [[menu.main]]
+    name = "Tags"
+    pre = "<i class='fa fa-tags fa-fw'></i>"
+    weight = 4
+    identifier = "tag"
+    url = "/tags/"
+  [[menu.main]]
     name = "Contact"
     pre = "<i class='fa fa-phone fa-fw'></i>"
-    weight = 4
+    weight = 5
     url = "/contact/"
 
 [social]
