@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Lambda-class</title>
-    <link>http://lambda-class.com/post/</link>
-    <description>Recent content in Posts on Lambda-class</description>
+    <title>Css on Lambda-class</title>
+    <link>http://lambda-class.com/tags/css/</link>
+    <description>Recent content in Css on Lambda-class</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
     <lastBuildDate>Tue, 10 Oct 2017 16:44:40 -0700</lastBuildDate>
     
-	<atom:link href="http://lambda-class.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://lambda-class.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>http://lambda-class.com/post/css-grid/</guid>
       <description>About the new CSS Grid Layout Module aka CSS Grid CSS Grid is a new method of using a grid concept to lay out content in an HTML page. It provides a mechanism for developers to divide available space for layout into columns and rows using a set of predictable sizing behaviours. CSS Grid will not only make it easy for developers to layout the most complicated designs but also, will make it possible to create designs that could not be implemented through other available solutions, such as Flexbox.</description>
-    </item>
-    
-    <item>
-      <title>Xamarin Project</title>
-      <link>http://lambda-class.com/post/xamarin-project/</link>
-      <pubDate>Wed, 27 Sep 2017 15:01:44 -0700</pubDate>
-      
-      <guid>http://lambda-class.com/post/xamarin-project/</guid>
-      <description>Using Xamarin Forms as an App Development Platform A brief description of the platform and the project I am working with some of the pros and cons I faced when starting to develop using Xamarin. What is Xamarin and How it works Xamarin is a development platform to build native apps for multiple platforms on a shared C# codebase. It uses the same IDE, language, and APIs to code apps for Android, IOS and Windows Phone.</description>
     </item>
     
   </channel>

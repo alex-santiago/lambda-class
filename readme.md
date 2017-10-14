@@ -56,3 +56,12 @@ Sources:
 
 - [Google Cloud Solutions](https://cloud.google.com/solutions/)
 - [Introducing Google Cloud mobility solutions](https://www.youtube.com/watch?v=ZTdszYVvCek&list=PLIivdWyY5sqLMy5ufxSwF7ro9L-6eMYbO)
+
+### 4. Node Interactive North America 2017 IoT 
+
+### 5. Node Interactive North America 2017 Node.js Performance tools
+
+### 6. How to build a custom control in Xamrin
+
+
+

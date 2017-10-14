@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.26" />
+
+  <title>CSS Grid Layout Module &middot; Lambda-class</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://lambda-class.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://lambda-class.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://lambda-class.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="icon" href="http://lambda-class.com/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://lambda-class.com/img/favicon.ico" type="image/x-icon" />
+
+  
+    <link rel="stylesheet" href="http://lambda-class.com/css/my.css">
+  
+  
+    <script src="http://lambda-class.com/js/my.js"></script>
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="http://lambda-class.com/">Lambda-Class</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/alexsanbhz" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/alexsanbhz/" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/assilva/" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/alex-santiago/" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>CSS Grid Layout Module</h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="about-the-new-css-grid-layout-module-aka-css-grid">About the new CSS Grid Layout Module aka CSS Grid</h1>
+
+<p>CSS Grid is a new method of using a grid concept to lay out content in an HTML page. It provides a mechanism for developers to divide available space for layout into columns and rows using a set of predictable sizing behaviours. CSS Grid will not only make it easy for developers to layout the most complicated designs but also, will make it possible to create designs that could not be implemented through other available solutions, such as Flexbox.</p>
+
+<p>Another main feature about CSS Grid is how easy it will be to adopt a new layout to different screens sizes by repositioning items using Query Strings.</p>
+
+<p>The first time I heard about CSS Grid was in March 2017, in an article published by Morten Rand-Hendriksen. By that time only 6.8% of the browsers supported CSS Grid. According to the website <a href="http://caniuse.com/#feat=css-grid">&ldquo;Can I Use?&rdquo;</a> 68.14% of the browsers currently fully support the use of CSS Grid worldwide.</p>
+
+<h2 id="how-to-define-a-grid-in-css">How to define a grid in CSS</h2>
+
+<p>To define a Grid use &ldquo;display:grid&rdquo; or &ldquo;display:inline-grid&rdquo; on the parent element. You can then create a grid using the grid-template-columns and grid-template-rows properties.</p>
+
+<pre><code class="language-css">.wrapper {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 75px;
+  grid-gap: 1px;
+  background-color: #fff;
+  width: 50%;
+  margin: auto;
+}
+</code></pre>
+
+<p>In the example above, we declare a wrapper class that creates a grid with three columns with a percentage based width and percentage and with a pixel base height.</p>
+
+<pre><code class="language-html">&lt;div class=&quot;wrapper&quot;&gt;
+  &lt;div class=&quot;box a&quot;&gt;A&lt;/div&gt;
+  &lt;div class=&quot;box b&quot;&gt;B&lt;/div&gt;
+  &lt;div class=&quot;box c&quot;&gt;C&lt;/div&gt;
+  &lt;div class=&quot;box d&quot;&gt;D&lt;/div&gt;
+  &lt;div class=&quot;box e&quot;&gt;E&lt;/div&gt;
+  &lt;div class=&quot;box f&quot;&gt;F&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The result:</p>
+
+<div class="wrapper">
+  <div class="box a">A</div>
+  <div class="box b">B</div>
+  <div class="box c">C</div>
+  <div class="box d">D</div>
+  <div class="box e">E</div>
+  <div class="box f">F</div>
+</div>
+
+<h2 id="elements-placement-in-css-grid">Elements placement in CSS Grid</h2>
+
+<p>In CSS Grid you place elements inside the defined grid by using the grid-column and grid-row properties. As noted by Morten Rand-Hendriksen, CSS Grid allows developers to think the same way designers do while creating layouts by drawing a grid and placing the page elements inside it.</p>
+
+<p>Bellow is an example of a ten by ten grid where page elements are distributed within the grid with different sizes:</p>
+
+<div class="wrapper2">
+  <div class="box head">Head</div>
+  <div class="box aside">Aside</div>
+  <div class="box highlight">Highlight</div>
+  <div class="box content1">Content 1</div>
+  <div class="box content2">Content 2</div>
+  <div class="box content3">Content 3</div>
+  <div class="box content4">Content 4</div>
+  <div class="box footer">Footer</div>
+</div>
+
+<p>Like other CSS elements, CSS Grid also offers a short notation for its properties.</p>
+
+<p>Below is the code for the classes used in the example:</p>
+
+<p>CSS Source</p>
+
+<pre><code class="language-css">.head, .footer {
+  grid-column: 1 / 10;
+}
+
+.aside {
+  grid-column: 2 / 4;
+  grid-row: 2 / 10;
+}
+
+.highlight {
+  grid-column: 5 / 9;
+  grid-row: 3 / 5;
+}
+
+.content1 {
+  grid-column: 5 / 7;
+  grid-row: 6 / 7;
+}
+.content2 {
+  grid-column: 7 / 9;
+  grid-row: 6 / 7;
+}
+.content3 {
+  grid-column: 5 / 7;
+  grid-row: 8 / 9;
+}
+.content4 {
+  grid-column: 7 / 9;
+  grid-row: 8 / 9;
+}
+</code></pre>
+
+<p>HTML Source</p>
+
+<pre><code class="language-html">&lt;div class=&quot;wrapper2&quot;&gt;
+  &lt;div class=&quot;box head&quot;&gt;Head&lt;/div&gt;
+  &lt;div class=&quot;box aside&quot;&gt;Aside&lt;/div&gt;
+  &lt;div class=&quot;box highlight&quot;&gt;Highlight&lt;/div&gt;
+  &lt;div class=&quot;box content1&quot;&gt;Content 1&lt;/div&gt;
+  &lt;div class=&quot;box content2&quot;&gt;Content 2&lt;/div&gt;
+  &lt;div class=&quot;box content3&quot;&gt;Content 3&lt;/div&gt;
+  &lt;div class=&quot;box content4&quot;&gt;Content 4&lt;/div&gt;
+  &lt;div class=&quot;box footer&quot;&gt;Footer&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>CSS Grid provides another advantage when building the layouts for different screen sizes and devices. For the other screen sizes, all you need to do is combine the use of CSS Grid and media queries using the classes you applied in your main layout. For instance, in the design above I may want to display the aside content below the header followed by the highlight and each content. I would need to rewrite the CSS for each class repositioning my elements inside the grid accordingly.</p>
+
+<p>CSS Source</p>
+
+<pre><code class="language-css">@media (max-width: 700px) {
+  .aside, .highlight, .content1, .content2, .content3, .content4 {
+    grid-column: 1 / 10;
+  }
+  .aside {
+    grid-row: 2;
+  }
+  .highlight {
+    grid-row: 3;
+  }
+  .content1 {
+    grid-row: 4;
+  }
+  .content2 {
+    grid-row: 5;
+  }
+  .content3, .content4 {
+    grid-row: 6;
+  }
+  .content4 {
+    grid-row: 7;
+  }
+}
+</code></pre>
+
+<p>As you can see, compared to the old Flex Grid solution CSS Grid has many advantages such as:</p>
+
+<ul>
+<li>Uses a simple syntax easy to read and write code</li>
+<li>Puts the development closer to the design</li>
+<li>Gives a more efficient solution to design for different screen sizes</li>
+<li>Allows the easy build of complex designs that otherwise were hard or impossible to implement with a simple solution</li>
+</ul>
+
+<p>In this post, I used some common properties of the Grid Element. I suggest reading the <a href="https://www.w3.org/TR/css3-grid-layout/">W3C CSS Grid Layout Specification</a> to view all the properties and syntax offered by CSS Grid.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://www.w3.org/TR/css3-grid-layout/">W3C Org::</a> Date Accessed: 2017-10-03</li>
+<li><a href="http://caniuse.com/#feat=css-grid">caniuse::</a> Date Accessed: 2017-10-03</li>
+<li><a href="https://www.linkedin.com/pulse/css-grid-next-evolution-web-layout-morten-rand-hendriksen?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_shares%3BVcMxADMXTa2w84JBTA7QyQ%3D%3D&amp;licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base_recent_activity_details_shares-original_share_object">css-grid-next-evolution-web-layout</a> Date Accessed: 2017-10-13<br /></li>
+<li><a href="https://mor10.com/wceu2017/">mor10.com::</a> Date Accessed: 2017-10-03</li>
+<li><a href="https://www.smashingmagazine.com/2017/06/building-production-ready-css-grid-layout/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_recent_activity_details_shares%3BVcMxADMXTa2w84JBTA7QyQ%3D%3D">smashingmagazine.com</a> Date Accessed: 2017-10-13</li>
+<li><a href="https://gridbyexample.com/">Grid by Example</a> Date Accessed: 2017-10-13</li>
+</ul>
+
+</div>
+
+</div>
+</div>
+<script src="http://lambda-class.com/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking ID', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+
