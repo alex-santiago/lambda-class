@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.26" />
+
+  <title>Node.js Optimization &middot; Lambda-class</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://lambda-class.com/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://lambda-class.com/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://lambda-class.com/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="icon" href="http://lambda-class.com/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://lambda-class.com/img/favicon.ico" type="image/x-icon" />
+
+  
+    <link rel="stylesheet" href="http://lambda-class.com/css/my.css">
+  
+  
+    <script src="http://lambda-class.com/js/my.js"></script>
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="http://lambda-class.com/">Lambda-Class</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/tags/"><i class='fa fa-tags fa-fw'></i>Tags</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lambda-class.com/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/alexsanbhz" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://instagram.com/alexsanbhz/" target="_blank"><i class="fa fa-instagram fa-fw"></i>Instagram</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/assilva/" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/alex-santiago/" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Node.js Optimization</h1>
+  <h2></h2>
+</div>
+<div class="content">
+  
+
+<h1 id="0x-a-node-js-optimization-tool">0x a Node.js Optimization Tool</h1>
+
+<p>I will show a tool called 0x that generates a Flame Graph. My goal is to give an overview of the tool. You can access a full step by step tutorial and learn how to use it by accessing the full article in <a href="https://www.nearform.com/blog/tuning-node-js-app-performance-with-autocannon-and-0x/">TUNING NODE.JS APP PERFORMANCE WITH AUTOCANNON AND 0X</a> by Ron Litzenberger. This tool was presented at the Node Interactive North America 2017 Node.js Conference that took place in Vancouver on October 5 by Matteo Collina and David Mark Clements from nearForm.</p>
+
+<p>V8 is Google’s open source high-performance JavaScript engine used in Google Chrome. The 0x provides a way to visually identify bottlenecks in the V8 engine making it easy to optimise Node.js Applications.</p>
+
+<h2 id="about-the-sample-application">About the sample application</h2>
+
+<p>The application used to demonstrate the performance tools uses node V6 and creates a server that receives requests and processes some calculations in the background. To simulate load to resources, we will use autocannon when we run the npm test command.</p>
+
+<h2 id="requesites-to-run-0x">Requesites to run 0x</h2>
+
+<ul>
+<li><p>autocannon (An HTTP/1.1 benchmarking tool written in Node.js)</p></li>
+
+<li><p>Node.js V6</p></li>
+</ul>
+
+<h2 id="running-an-example">Running an example</h2>
+
+<p>Get the sample application from the nearForm git repository.</p>
+
+<pre><code class="language-bash">git clone https://github.com/nearform/slow-rest-api
+</code></pre>
+
+<h3 id="install-the-example">Install the Example</h3>
+
+<pre><code class="language-bash"># install dependencies
+npm install
+# install autocannon
+npm install -g autocannon
+# install 0x
+npm install -g 0x
+</code></pre>
+
+<h2 id="chrome-performance-tools">Chrome Performance Tools</h2>
+
+<p>Chrome offers some built-in options for performance analysis of a page as it is running. You can run your node code in profiling mode and load the resulting v8.log into Chrome at chrome://tracing.</p>
+
+<p>Run your node application:</p>
+
+<pre><code class="language-bash">node --prof --track_gc_object_stats --trace_gc_verbose --log_timer_events index.js
+</code></pre>
+
+<p>Load the generated log file into the Chrome tracing tool. The result will be a graph that shows the resulting graph with event logging of the application.</p>
+
+<h3 id="using-the-chrome-inspector">Using the Chrome Inspector</h3>
+
+<p>Chrome offers a profiler that you can use to attach to node process and map CPU and Memory usage while your application is running.</p>
+
+<p>First, run node with the inspect flag, this will allow the Chrome debugger to attach to the node process running in at localhost port:9229</p>
+
+<pre><code class="language-bash">node --inspect index.js
+</code></pre>
+
+<p>After starting the node process, open the <a href="chrome://inspect/">Chrome inspector</a> in the Devices tab.</p>
+
+<pre><code class="language-bash"> chrome://inspect/
+</code></pre>
+
+<p><img class="pure-u-1-1" src="../../img/profiler.png" alt="Chrome Profiler"></p>
+
+<p>The target index.js should appear under the list of Remote Targets. You can use both the CPU Profiler that will record execution and map each call to its location in the code or use the Memory Profiler to show memory allocations for your JavaScript functions.</p>
+
+<p><strong>Processor:</strong></p>
+
+<p><img class="pure-u-1-1" src="../../img/profile-processor.png" alt="Processor Allocation Profile"></p>
+
+<p><strong>Memory:</strong></p>
+
+<p><img class="pure-u-1-1" src="../../img/profile-memory.png" alt="Memory Allocation Profile"></p>
+
+<h2 id="generating-the-flame-graph-in-0x">Generating the flame graph in 0x</h2>
+
+<ol>
+<li><p>Run the server in a terminal window</p>
+
+<pre><code class="language-bash">0x -o index.js
+# The [-o] parameter opens the flame graph in the browser
+</code></pre></li>
+
+<li><p>In another terminal window run the test script</p>
+
+<pre><code class="language-bash">npm test
+</code></pre>
+
+<p><img class="pure-u-1-1" src="../../img/test-output.png" alt="npm test output"></p></li>
+
+<li><p>When the test finishes press Ctrl-C in the first terminal window to interrupt 0x and generate the graph (flamegraph.html).
+<img class="pure-u-1-1" src="../../img/test-end.png" alt="Process interruption"></p></li>
+</ol>
+
+<p><strong>Sample Generated Flame Graph:</strong></p>
+
+<p><img class="pure-u-1-1" src="../../img/flamegraph-generated.png" alt="Sample Flame Graph"></p>
+
+<h2 id="reading-the-flame-graph">Reading the Flame Graph</h2>
+
+<p>Each box in the graph signify a function, and the different colours represent the amount of time that the function spent using the CPU. A dark red box is a hot function which would be blocking the event loop, meaning that more time was observed on top of the stack.</p>
+
+<p>By hovering the mouse over the graph bars, you can see detailed information about the module: the file location and line, how long it remained in the stack and how long it stayed on the top of the stack.</p>
+
+<p>By clicking on the graph line, we can zoom in and see the details for that particular line. In the example, the file &ldquo;etag.js&rdquo; was most of the time on the top of the stack. Observing the colours and the percentage helps isolate the performance problem to this particular file tracing back the precise line.</p>
+
+<p><img class="pure-u-1-1" src="../../img/flamegraph-zoom.png" alt="Sample Flame Graph Zoomed in"></p>
+
+<p>In this article, we gave an overview of different tools that can be used to identify bottlenecks. My favourite one being the 0x to visualise the stack trace to identify potential bottlenecks in the event loop. However, it is important to notice that once the problem is solved, it will move to another point. Improving performance is a task that will never end. One must know the balance between the time spent finding the bottleneck and when to move on to other things.</p>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li><p><a href="https://github.com/nearform">Near Form Repo</a> Date Accessed: 2017-10-14</p></li>
+
+<li><p><a href="https://github.com/nearform/slow-rest-api">Slow Rest API Demo</a> Date Accessed: 2017-10-14</p></li>
+
+<li><p><a href="https://www.nearform.com/">nearForm</a> Date Accessed: 2017-10-14</p></li>
+
+<li><p><a href="https://developers.google.com/v8/">Chrome V8</a> Date Accessed: 2017-10-17</p></li>
+
+<li><p><a href="https://www.nearform.com/blog/tuning-node-js-app-performance-with-autocannon-and-0x/">TUNING NODE.JS APP PERFORMANCE WITH AUTOCANNON AND 0X</a> Date Accessed: 2017-10-17</p></li>
+
+<li><p><a href="https://developers.google.com/web/tools/chrome-devtools/rendering-tools/">Analyze Runtime Performance in Chrome</a> Date Accessed: 2017-10-18</p></li>
+
+<li><p><a href="https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference">Performance Analysis Reference</a> Date Accessed: 2017-10-18</p></li>
+
+<li><p><a href="https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27">Debugging Node.js with Chrome DevTools</a> Date Accessed: 2017-10-18</p></li>
+
+<li><p><a href="https://github.com/thlorenz/v8-perf/issues/42">Tools and resources regarding Node.js and Performance Tools Integration</a> Date Accessed: 2017-10-18</p></li>
+
+<li><p><a href="https://github.com/davidmarkclements/0x">Ox Repo</a> Date Accessed: 2017-10-18</p></li>
+</ul>
+
+</div>
+
+</div>
+</div>
+<script src="http://lambda-class.com/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking ID', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
+

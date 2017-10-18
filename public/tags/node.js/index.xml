@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node.js on Lambda-class</title>
+    <link>http://lambda-class.com/tags/node.js/</link>
+    <description>Recent content in Node.js on Lambda-class</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 14 Oct 2017 09:46:53 -0700</lastBuildDate>
+    
+	<atom:link href="http://lambda-class.com/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Node.js Optimization</title>
+      <link>http://lambda-class.com/post/flamegraph/</link>
+      <pubDate>Sat, 14 Oct 2017 09:46:53 -0700</pubDate>
+      
+      <guid>http://lambda-class.com/post/flamegraph/</guid>
+      <description>0x a Node.js Optimization Tool I will show a tool called 0x that generates a Flame Graph. My goal is to give an overview of the tool. You can access a full step by step tutorial and learn how to use it by accessing the full article in TUNING NODE.JS APP PERFORMANCE WITH AUTOCANNON AND 0X by Ron Litzenberger. This tool was presented at the Node Interactive North America 2017 Node.</description>
+    </item>
+    
+  </channel>
+</rss>
