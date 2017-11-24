@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.26" />
 
-  <title>Mobile &middot; Lambda-class</title>
+  <title>Xamarin Custom Renderers &middot; Lambda-class</title>
 
   
   
@@ -36,8 +36,6 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
   
-  
-  <link rel="alternate" type="application/rss+xml" title="Lambda-class" href="http://lambda-class.com/tags/mobile/index.xml" />
   
 
   
@@ -115,10 +113,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="http://lambda-class.com/tags/mobile/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -230,110 +224,103 @@
 
 
 <div class="header">
-  <h1>Mobile</h1>
+  <h1>Xamarin Custom Renderers</h1>
+  <h2></h2>
 </div>
-
 <div class="content">
   
-    <article>
-  <header>
-    <h2><a href="http://lambda-class.com/post/customrender/">Xamarin Custom Renderers</a></h2>
 
-    <div class="post-meta">
+<h1 id="what-is-a-custom-renderer">What is a Custom Renderer</h1>
 
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>Oct 23 2017</time>
-  </div>
+<p>A Custom Renderer is a developer made Renderer Class that customises the appearance and behaviour of a UI control. The Renderer Class is responsible for creating the Xamarin.Forms representation of pages, layouts or controls for each platform (IOS, Android or Windows Phone). An alternative to Custom Renderers is the development of Custom Controls through subclassing.</p>
 
-  
+<p><img class="pure-u-1-1" src="../../img/Artboard8.png" alt="Custom Renderers"></p>
 
-  
+<p>The Custom Renderer Class is a derived class implementation of the Renderer Class responsible for rendering the corresponding UI object in each platform. Each Xamarin Forms UI element has its renderer for the native control it represents.</p>
 
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="http://lambda-class.com/tags/xamarin">Xamarin</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="http://lambda-class.com/tags/mobile">Mobile</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="http://lambda-class.com/tags/ios">IOS</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="http://lambda-class.com/tags/android">Android</a>
-    
-  </div>
-  
-  
+<h2 id="why-you-need-a-custom-renderer">Why you need a Custom Renderer</h2>
 
-</div>
+<p>The alternatives to implement a Custom Renderer is to use subclassing or Effect. These techniques are limited in what they can achieve as it is not possible to take advantage of platform-specific enhancements and customisations. When they are required, custom renderers must be implemented.</p>
 
-  </header>
+<h1 id="how-to-create-a-custom-renderer">How to create a Custom Renderer</h1>
 
-  <p>
-  What is a Custom Renderer A Custom Renderer is a developer made Renderer Class that customises the appearance and behaviour of a UI control. The Renderer Class is responsible for creating the Xamarin.Forms representation of pages, layouts or controls for each platform (IOS, Android or Windows Phone). An alternative to Custom Renderers is the development of Custom Controls through subclassing.
-The Custom Renderer Class is a derived class implementation of the Renderer Class responsible for rendering the corresponding UI object in each platform.
-  </p>
+<p>The process for creating a custom renderer class is as follows:</p>
 
-  
-  <footer>
-    <a href="http://lambda-class.com/post/customrender/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
+<ol>
+<li>Create a subclass of the renderer class that renders the native control.</li>
+<li>Override the method that renders the native control and write the logic to customise the control. Often, the OnElementChanged method is used to render the native control, which is called when the corresponding Xamarin.Forms control is created.</li>
+<li>Add an ExportRenderer attribute to the custom renderer class to specify that it will be used to render the Xamarin.Forms control. This attribute is used to register the custom renderer with Xamarin.Forms.</li>
+</ol>
 
-  
-    <article>
-  <header>
-    <h2><a href="http://lambda-class.com/post/xamarin-project/">Xamarin Project</a></h2>
+<h2 id="quick-example">Quick Example</h2>
 
-    <div class="post-meta">
+<p>In this example, I create a custom renderer for the Entry input field from Xamarin Forms. To show the different results, I also provide the code for a derived class using the subclassing technique mentioned.</p>
 
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>Sep 27 2017</time>
-  </div>
+<h3 id="source-code-for-the-subclass-myentry">Source code for the subclass MyEntry</h3>
 
-  
+<pre><code class="language-cs">using Xamarin.Forms;
 
-  
+namespace CustomRenderer
+{
+    public class MyEntry: Entry
+    {
+        public MyEntry()
+        {
+            BackgroundColor = Color.FromHex(&quot;#6c6c6c&quot;);
+            TextColor = Color.SkyBlue;
+        }
+    }
+}
+</code></pre>
 
-  
-  
-  
-  <div>
-    <i class="fa fa-tags fa-fw"></i>
-    
-      <a class="post-taxonomy-tag" href="http://lambda-class.com/tags/xamarin">Xamarin</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="http://lambda-class.com/tags/mobile">Mobile</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="http://lambda-class.com/tags/ios">IOS</a>&nbsp;&#47;
-    
-      <a class="post-taxonomy-tag" href="http://lambda-class.com/tags/android">Android</a>
-    
-  </div>
-  
-  
+<p>This code creates a Custom Control derived from the class Entry. In the class constructor, I alter the Background Color and Text Color for the control.</p>
 
-</div>
+<h3 id="source-code-for-the-custom-renderer">Source code for the Custom Renderer</h3>
 
-  </header>
+<pre><code class="language-cs">using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
+using CustomRenderer;
 
-  <p>
-  Using Xamarin Forms as an App Development Platform A brief description of the platform and the project I am working with some of the pros and cons I faced when starting to develop using Xamarin. What is Xamarin and How it works Xamarin is a development platform to build native apps for multiple platforms on a shared C# codebase. It uses the same IDE, language, and APIs to code apps for Android, IOS and Windows Phone.
-  </p>
+[assembly: ExportRenderer(typeof(CustomEntry), typeof(SampleCustomRenderer.Droid.AndroidEntry))]
+namespace SampleCustomRenderer.Droid
+{
+    public class AndroidEntry: EntryRenderer
+    {
+        protected override void OnElementChanged(ElementChangedEventArgs&lt;Entry&gt; e)
+        {
+            base.OnElementChanged(e);
 
-  
-  <footer>
-    <a href="http://lambda-class.com/post/xamarin-project/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
-  </footer>
-  
-</article>
+            if (Control != null)
+            {
+                Control.SetBackgroundColor(global::Android.Graphics.Color.LightGreen);
+            }
+        }
+    }
+}
+</code></pre>
 
-  
+<p>In this code, I create a Custom Renderer that will create a customised AndroidEntry control. Inside the OnElementChanged method, I alter the Background colour for this control.</p>
+
+<h2 id="result">Result</h2>
+
+<p><img class="pure-u-1-3" src="../../img/AndroidEmulator.png" alt="Android Emulator Screen"></p>
+
+<p>In the image, we can see three different versions of the same control. The first is the original Xamarin Forms version of the Entry Control. The second is the subclass MyEntry control. And third, at the bottom, is the Custom Rendered Control for Android.</p>
+
+<p><img class="pure-u-1-3" src="../../img/IOSEmulator.png" alt="IOS Emulator Screen"></p>
+
+<p>The same application is rendered different for the IOS. The custom rendered control has the same appearance as the original Xamarin Forms Entry since it does not have a Custom Renderer implemented for the IOS.</p>
+
+<p>The complete source code for this project is available in GitHub <a href="https://github.com/alex-santiago/Xamarin-Custom-Renderer-Example">Xamarin Custom Renderer Example</a>.</p>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li><p><a href="https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/custom-renderer/">Xamarin Custom Renderes</a> Date Accessed: 2017-10-23</p></li>
+
+<li><p><a href="https://xamarinhelp.com/basics-xamarin-forms-custom-renderers/">Basics of Xamarin Forms Custom Renderers</a> Date Accessed: 2017-11-23</p></li>
+</ul>
+
 </div>
 
 </div>
@@ -356,3 +343,4 @@ The Custom Renderer Class is a derived class implementation of the Renderer Clas
 
 </body>
 </html>
+
