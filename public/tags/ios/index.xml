@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Mon, 23 Oct 2017 12:41:13 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 23 Nov 2017 12:41:13 -0700</lastBuildDate>
     
 	<atom:link href="http://lambda-class.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Xamarin Custom Renderers</title>
       <link>http://lambda-class.com/post/customrender/</link>
-      <pubDate>Mon, 23 Oct 2017 12:41:13 -0700</pubDate>
+      <pubDate>Thu, 23 Nov 2017 12:41:13 -0700</pubDate>
       
       <guid>http://lambda-class.com/post/customrender/</guid>
       <description>What is a Custom Renderer A Custom Renderer is a developer made Renderer Class that customises the appearance and behaviour of a UI control. The Renderer Class is responsible for creating the Xamarin.Forms representation of pages, layouts or controls for each platform (IOS, Android or Windows Phone). An alternative to Custom Renderers is the development of Custom Controls through subclassing.
