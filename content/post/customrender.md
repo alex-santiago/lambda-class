@@ -1,6 +1,6 @@
 ---
 title: "Xamarin Custom Renderers"
-date: 2017-10-23T12:41:13-07:00
+date: 2017-11-23T12:41:13-07:00
 tags: [Xamarin, Mobile, IOS, Android]
 draft: false
 ---
